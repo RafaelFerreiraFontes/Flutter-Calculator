@@ -13,8 +13,17 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(),
         body: Center(
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [Text('0'), GridButton()],
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              Row(mainAxisAlignment: MainAxisAlignment.end, children: [
+                Text(
+                  '00000000000000000000000',
+                  style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+                ),
+              ]),
+              Padding(padding: EdgeInsets.all(16)),
+              Row(children: [GridButton()])
+            ],
           ),
         ),
       ),

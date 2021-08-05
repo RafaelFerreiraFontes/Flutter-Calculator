@@ -43,7 +43,16 @@ class GridButton extends StatelessWidget {
       ),
       Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: [new CalculatorButton("CLEAR"), new CalculatorButton("=")],
+        children: [
+          new CalculatorButton(
+            "CLEAR",
+            witdh: 215,
+          ),
+          new CalculatorButton(
+            "=",
+            witdh: 215,
+          )
+        ],
       )
     ]);
   }

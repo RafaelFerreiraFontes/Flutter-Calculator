@@ -2,9 +2,11 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class CalculatorButton extends StatelessWidget {
-  CalculatorButton(this.text);
+  CalculatorButton(this.text, {this.witdh = 95, this.height = 75});
 
   final String text;
+  double witdh;
+  double height;
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +21,8 @@ class CalculatorButton extends StatelessWidget {
                 color: Colors.white),
           ),
           style: TextButton.styleFrom(
-              backgroundColor: Colors.grey, minimumSize: Size(45, 45)),
+              backgroundColor: Colors.grey,
+              minimumSize: Size(this.witdh, this.height)),
           onPressed: () => {print(this.text)},
         ));
   }
