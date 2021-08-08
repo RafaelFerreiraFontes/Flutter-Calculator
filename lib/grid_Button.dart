@@ -8,6 +8,16 @@ class GridButton extends StatelessWidget {
       Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
+          new CalculatorButton(
+            "HISTORIC",
+            witdh: 215,
+          ),
+          new CalculatorButton("<-", witdh: 215)
+        ],
+      ),
+      Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
           new CalculatorButton("7"),
           new CalculatorButton("8"),
           new CalculatorButton("9"),
