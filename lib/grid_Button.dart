@@ -30,7 +30,7 @@ class GridButton extends StatelessWidget {
           new CalculatorButton("4"),
           new CalculatorButton("5"),
           new CalculatorButton("6"),
-          new CalculatorButton("X")
+          new CalculatorButton("*")
         ],
       ),
       Row(
@@ -47,7 +47,8 @@ class GridButton extends StatelessWidget {
         children: [
           new CalculatorButton("."),
           new CalculatorButton("0"),
-          new CalculatorButton("00"),
+          new CalculatorButton("(", witdh: 42, pad: 10),
+          new CalculatorButton(")", witdh: 42, pad: 2),
           new CalculatorButton("+")
         ],
       ),

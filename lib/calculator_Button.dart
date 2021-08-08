@@ -3,18 +3,18 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class CalculatorButton extends StatelessWidget {
-  CalculatorButton(this.text, {this.witdh = 95, this.height = 75});
+  CalculatorButton(this.text,
+      {this.witdh = 95, this.height = 75, this.pad = 12});
 
   final String text;
   double witdh;
   double height;
-
-  final app = myapp;
+  double pad;
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-        padding: EdgeInsets.all(12),
+        padding: EdgeInsets.all(pad),
         child: TextButton(
           child: new Text(
             text,
@@ -26,7 +26,7 @@ class CalculatorButton extends StatelessWidget {
           style: TextButton.styleFrom(
               backgroundColor: Colors.grey,
               minimumSize: Size(this.witdh, this.height)),
-          onPressed: () => {app},
+          onPressed: () => {myapp.app.calculator.insert(this.text)},
         ));
   }
 }
