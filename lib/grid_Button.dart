@@ -4,15 +4,13 @@ import 'package:flutter/cupertino.dart';
 class GridButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Column(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
+    return Expanded(
+        child: Column(mainAxisAlignment: MainAxisAlignment.end, children: [
       Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          new CalculatorButton(
-            "HISTORIC",
-            witdh: 215,
-          ),
-          new CalculatorButton("<-", witdh: 215)
+          new CalculatorButton("HISTORIC", witdh: (75.5 * 2.75), pad: 7),
+          new CalculatorButton("<-", witdh: (75.5 * 2), pad: 6)
         ],
       ),
       Row(
@@ -47,24 +45,18 @@ class GridButton extends StatelessWidget {
         children: [
           new CalculatorButton("."),
           new CalculatorButton("0"),
-          new CalculatorButton("(", witdh: 42, pad: 10),
-          new CalculatorButton(")", witdh: 42, pad: 2),
+          new CalculatorButton("(", witdh: 22, pad: 0),
+          new CalculatorButton(")", witdh: 22, pad: 0),
           new CalculatorButton("+")
         ],
       ),
       Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          new CalculatorButton(
-            "CLEAR",
-            witdh: 215,
-          ),
-          new CalculatorButton(
-            "=",
-            witdh: 215,
-          )
+          new CalculatorButton("CLEAR", witdh: (75 * 2.75), pad: 6),
+          new CalculatorButton("=", witdh: (75.5 * 2), pad: 0)
         ],
       )
-    ]);
+    ]));
   }
 }

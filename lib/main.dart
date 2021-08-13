@@ -37,43 +37,12 @@ class _Calculator extends State<Calculator> {
       title: 'Calculator',
       theme: ThemeData(brightness: Brightness.dark),
       home: Scaffold(
-        appBar: AppBar(),
-        body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-                Container(
-                  width: 455,
-                  height: 122,
-                  alignment: AlignmentDirectional.centerEnd,
-                  decoration: BoxDecoration(
-                      shape: BoxShape.rectangle,
-                      border: Border.all(color: Colors.black, width: 2.5),
-                      color: Colors.blueGrey.shade900),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        this.expression,
-                        style: TextStyle(
-                            fontSize: 42, fontWeight: FontWeight.bold),
-                      ),
-                      Text(
-                        this.preview,
-                        style: TextStyle(
-                            fontSize: 42, fontWeight: FontWeight.bold),
-                      )
-                    ],
-                  ),
-                  margin: EdgeInsets.fromLTRB(0, 0, 0, 0),
-                )
-              ]),
-              Padding(padding: EdgeInsets.fromLTRB(0, 0, 0, 0)),
-              Row(children: [GridButton()])
-            ],
+        appBar: null,
+        body: Column(mainAxisAlignment: MainAxisAlignment.end, children: [
+          Expanded(
+            child: GridButton(),
           ),
-        ),
+        ]),
       ),
     );
   }

@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 class CalculatorButton extends StatelessWidget {
   CalculatorButton(this.text,
-      {this.witdh = 95, this.height = 75, this.pad = 12});
+      {this.witdh = 75.5, this.height = 65, this.pad = 12});
 
   final String text;
   double witdh;
@@ -25,7 +25,11 @@ class CalculatorButton extends StatelessWidget {
           ),
           style: TextButton.styleFrom(
               backgroundColor: Colors.grey,
-              minimumSize: Size(this.witdh, this.height)),
+              minimumSize: Size(
+                  MediaQuery.of(context).size.width *
+                      (this.witdh / MediaQuery.of(context).size.width),
+                  MediaQuery.of(context).size.height *
+                      (this.height / MediaQuery.of(context).size.height))),
           onPressed: () => {myapp.app.calculator.insert(this.text)},
         ));
   }
