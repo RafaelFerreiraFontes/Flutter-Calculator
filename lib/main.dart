@@ -37,11 +37,9 @@ class _Calculator extends State<Calculator> {
       title: 'Calculator',
       theme: ThemeData(brightness: Brightness.dark),
       home: Scaffold(
-        appBar: null,
+        appBar: AppBar(),
         body: Column(mainAxisAlignment: MainAxisAlignment.end, children: [
-          Expanded(
-            child: GridButton(),
-          ),
+          GridButton(),
         ]),
       ),
     );

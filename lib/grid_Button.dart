@@ -7,10 +7,10 @@ class GridButton extends StatelessWidget {
     return Expanded(
         child: Column(mainAxisAlignment: MainAxisAlignment.end, children: [
       Row(
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          new CalculatorButton("HISTORIC", witdh: (75.5 * 2.75), pad: 7),
-          new CalculatorButton("<-", witdh: (75.5 * 2), pad: 6)
+          new CalculatorButton("HISTORIC", width: (60 * 2.75), pad: 0),
+          new CalculatorButton("<-", width: (60 * 2), pad: 0)
         ],
       ),
       Row(
@@ -43,18 +43,18 @@ class GridButton extends StatelessWidget {
       Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          new CalculatorButton("."),
-          new CalculatorButton("0"),
-          new CalculatorButton("(", witdh: 22, pad: 0),
-          new CalculatorButton(")", witdh: 22, pad: 0),
-          new CalculatorButton("+")
+          new CalculatorButton(".", width: 8,),
+          new CalculatorButton("0", width: 8,),
+          new CalculatorButton("(", width: 8),
+          new CalculatorButton(")", width: 8),
+          new CalculatorButton("+", width: 8,)
         ],
       ),
       Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          new CalculatorButton("CLEAR", witdh: (75 * 2.75), pad: 6),
-          new CalculatorButton("=", witdh: (75.5 * 2), pad: 0)
+          new CalculatorButton("CLEAR", width: (60 * 2.75), pad: 0),
+          new CalculatorButton("=", width: (60 * 2), pad: 0)
         ],
       )
     ]));
